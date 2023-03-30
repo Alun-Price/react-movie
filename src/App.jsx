@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { useState, useEffect, createContext } from "react";
 import ButtonFilters from "./components/ButtonFilters";
 import Movies from "./components/Movies";
@@ -33,7 +34,9 @@ function App() {
       <div className="app">
         <ButtonFilters />
         <div className="image-container">
-          <Movies />
+          <AnimatePresence>
+            <Movies />
+          </AnimatePresence>
         </div>
       </div>
     </MovieContext.Provider>
