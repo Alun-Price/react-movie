@@ -2,6 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import { useState, useEffect, createContext } from "react";
 import ButtonFilters from "./components/ButtonFilters";
 import Movies from "./components/Movies";
+import bgVideo from "../assets/underwater-6061.mp4";
 
 // Create Context
 export const MovieContext = createContext();
@@ -33,12 +34,23 @@ function App() {
 
   return (
     <MovieContext.Provider value={value}>
-      <div className="app">
-        <ButtonFilters />
-        <div className="image-container">
-          <AnimatePresence>
-            <Movies />
-          </AnimatePresence>
+      <div>
+        <video
+          className="bg-video"
+          type="video/>mp4"
+          src={bgVideo}
+          autoPlay
+          muted
+          loop
+        />
+        <div className="app">
+          <h1>Underwater Movies</h1>
+          <ButtonFilters />
+          <div className="image-container">
+            <AnimatePresence>
+              <Movies />
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </MovieContext.Provider>
