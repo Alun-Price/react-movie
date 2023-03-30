@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { MovieContext } from "../App";
 
 const Movies = () => {
-  const { popularMovies } = useContext(MovieContext);
+  const { filteredMovie } = useContext(MovieContext);
 
-  return popularMovies.map((movie) => (
+  return filteredMovie.map((movie) => (
     <div className="image-card">
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
