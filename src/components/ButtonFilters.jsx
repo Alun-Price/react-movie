@@ -6,7 +6,7 @@ const ButtonFilters = () => {
   return (
     <div className="button-wrapper">
       {genres.map((item) => (
-        <button>{item}</button>
+        <button key={item}>{item}</button>
       ))}
     </div>
   );
