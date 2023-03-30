@@ -12,7 +12,9 @@ function App() {
 
   const fetchPopularMovie = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=6cb58f5c37660b569aaa773b2dabc325&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=en-US&page=1`
     );
     const movies = await response.json();
     setPopularMovies(movies.results);
