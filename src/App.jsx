@@ -12,7 +12,9 @@ function App() {
   const [filteredMovie, setFilteredMovie] = useState([]);
 
   const fetchPopularMovie = async () => {
-    const response = await fetch("/.netlify/functions/token-hider/token-hider");
+    const response = await fetch(
+      "/.netlify/functions/token-hider/token-hider.js"
+    );
     const movies = await response.json();
     setPopularMovies(movies.results);
     setFilteredMovie(movies.results);
