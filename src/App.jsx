@@ -34,23 +34,21 @@ function App() {
 
   return (
     <MovieContext.Provider value={value}>
-      <div>
-        <video
-          className="bg-video"
-          type="video/>mp4"
-          src={bgVideo}
-          autoPlay
-          muted
-          loop
-        />
-        <div className="app">
-          <h1>Underwater Movies</h1>
-          <ButtonFilters />
-          <div className="image-container">
-            <AnimatePresence>
-              <Movies />
-            </AnimatePresence>
-          </div>
+      <video
+        className="bg-video"
+        type="video/>mp4"
+        src={bgVideo}
+        autoPlay
+        muted
+        loop
+      />
+      <div className="app">
+        <h1>Underwater Movies</h1>
+        <ButtonFilters />
+        <div className="image-container">
+          <AnimatePresence>
+            <Movies />
+          </AnimatePresence>
         </div>
       </div>
     </MovieContext.Provider>
