@@ -14,8 +14,9 @@ function App() {
 
   const fetchPopularMovie = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+      "/.netlify/functions/movies?path=/movie/" + movie_id
     );
+
     const movies = await response.json();
     setPopularMovies(movies.results);
     setFilteredMovie(movies.results);
