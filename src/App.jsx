@@ -10,10 +10,11 @@ export const MovieContext = createContext();
 function App() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [filteredMovie, setFilteredMovie] = useState([]);
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   const fetchPopularMovie = async () => {
     const response = await fetch(
-      "/.netlify/netlify/functions/token-hider/token-hider.js"
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
     );
     const movies = await response.json();
     setPopularMovies(movies.results);
