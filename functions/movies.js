@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 console.log("HERE");
-exports.handler = async (event, context) => {
+export const handler = async () => {
   const api_key = process.env.VITE_MOVIES_API_KEY;
   console.log("KEY: ".api_key);
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`;
