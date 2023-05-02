@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
 exports.handler = async function (event, context) {
   const api_key = process.env.VITE_MOVIES_API_KEY;
