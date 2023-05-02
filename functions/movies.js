@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-
+console.log("HERE");
 exports.handler = async (event, context) => {
   const api_key = process.env.VITE_MOVIES_API_KEY;
   console.log("KEY: ".api_key);
