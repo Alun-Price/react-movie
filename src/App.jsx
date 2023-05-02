@@ -10,7 +10,6 @@ export const MovieContext = createContext();
 function App() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [filteredMovie, setFilteredMovie] = useState([]);
-  const API_KEY = import.meta.env.VITE_API_KEY;
 
   const fetchPopularMovie = async () => {
     const response = await fetch(
