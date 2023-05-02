@@ -12,11 +12,7 @@ function App() {
   const [filteredMovie, setFilteredMovie] = useState([]);
 
   const fetchPopularMovie = async () => {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${
-        import.meta.env.VITE_API_KEY
-      }&language=en-US&page=1`
-    );
+    const response = await fetch("/.netlify/functions/token-hider/token-hider");
     const movies = await response.json();
     setPopularMovies(movies.results);
     setFilteredMovie(movies.results);
