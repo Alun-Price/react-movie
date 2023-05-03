@@ -12,9 +12,9 @@ function App() {
   const [filteredMovie, setFilteredMovie] = useState([]);
 
   const fetchPopularMovie = async () => {
-    const response = await fetch("/functions/movies.js");
+    const response = await fetch("/.netlify/functions/movies");
 
-    const movies = await response.json();
+    const movies = await data;
     setPopularMovies(movies.results);
     setFilteredMovie(movies.results);
   };

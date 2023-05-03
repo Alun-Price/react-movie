@@ -9,6 +9,8 @@ export const handler = async () => {
   const data = await response.json();
   return {
     statusCode: 200,
-    body: JSON.stringify(data),
+    body: JSON.stringify({
+      data,
+    }),
   };
 };
